@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidade — Conhecereis a Verdade</title>
+<meta name="description" content="Como tratamos os dados de quem comenta ou nos escreve por mensagem: Conhecereis a Verdade e Os 4 Pilares da Oração Eficaz.">
+<link rel="canonical" href="https://conhecereisverdade.com.br/privacidade/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#FAF7F0;
+  --surface:#FFFFFF;
+  --surface-2:#F3EDE0;
+  --ink:#241F18;
+  --ink-muted:#665D4C;
+  --ink-faint:#8B8272;
+  --accent:#9C6F22;
+  --accent-ink:#7A5618;
+  --border:#E6DCC4;
+  --border-strong:#D8C9A3;
+  --callout-bg:#FBF3DE;
+  --link:#7A5618;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#161209;
+    --surface:#1E1810;
+    --surface-2:#251E13;
+    --ink:#F3ECDC;
+    --ink-muted:#C4B79B;
+    --ink-faint:#8F8368;
+    --accent:#E0B15A;
+    --accent-ink:#F0C878;
+    --border:#3A2F1C;
+    --border-strong:#4C3D24;
+    --callout-bg:#2A2211;
+    --link:#F0C878;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#161209;
+  --surface:#1E1810;
+  --surface-2:#251E13;
+  --ink:#F3ECDC;
+  --ink-muted:#C4B79B;
+  --ink-faint:#8F8368;
+  --accent:#E0B15A;
+  --accent-ink:#F0C878;
+  --border:#3A2F1C;
+  --border-strong:#4C3D24;
+  --callout-bg:#2A2211;
+  --link:#F0C878;
+}
+
+*{box-sizing:border-box;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  padding:0 20px;
+}
+.wrap{
+  max-width:740px;
+  margin:0 auto;
+  padding-block:56px 80px;
+}
+
+/* ---------- header ---------- */
+.doc-header{
+  border-bottom:1px solid var(--border-strong);
+  padding-bottom:28px;
+  margin-bottom:32px;
+}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--accent-ink);
+  margin:0 0 14px;
+}
+h1{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-weight:700;
+  font-size:clamp(28px,5vw,38px);
+  line-height:1.15;
+  text-wrap:balance;
+  margin:0 0 14px;
+  color:var(--ink);
+}
+.doc-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 22px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  color:var(--ink-muted);
+}
+.doc-meta span b{
+  color:var(--ink);
+  font-weight:500;
+}
+
+/* ---------- quick facts callout ---------- */
+.callout{
+  background:var(--callout-bg);
+  border:1px solid var(--border-strong);
+  border-radius:6px;
+  padding:22px 24px;
+  margin:0 0 40px;
+}
+.callout-title{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--accent-ink);
+  margin:0 0 12px;
+}
+.fact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px 24px;
+}
+.fact dt{
+  font-size:12.5px;
+  color:var(--ink-faint);
+  margin-bottom:2px;
+}
+.fact dd{
+  margin:0;
+  font-size:14.5px;
+  color:var(--ink);
+  font-weight:500;
+}
+
+/* ---------- toc ---------- */
+nav.toc{
+  margin:0 0 44px;
+  padding:18px 22px;
+  border:1px solid var(--border);
+  border-radius:6px;
+  background:var(--surface);
+}
+nav.toc p{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin:0 0 10px;
+}
+nav.toc ol{
+  columns:2;
+  column-gap:24px;
+  margin:0;
+  padding-left:20px;
+  font-size:14px;
+}
+nav.toc li{margin-bottom:6px;}
+nav.toc a{color:var(--link);text-decoration:none;}
+nav.toc a:hover{text-decoration:underline;}
+
+/* ---------- sections ---------- */
+section{
+  margin-bottom:38px;
+  scroll-margin-top:20px;
+}
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:12px;
+}
+.sec-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:14px;
+  color:var(--accent-ink);
+  flex-shrink:0;
+}
+h2{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-weight:600;
+  font-size:21px;
+  color:var(--ink);
+  margin:0;
+  text-wrap:balance;
+}
+section p, section li{
+  color:var(--ink-muted);
+  font-size:15.5px;
+  max-width:62ch;
+}
+section p{margin:0 0 14px;}
+section ul{margin:0 0 14px;padding-left:22px;}
+section li{margin-bottom:6px;}
+strong{color:var(--ink);font-weight:600;}
+a{color:var(--link);}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 16px;}
+.pill{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12.5px;
+  padding:4px 10px;
+  border:1px solid var(--border-strong);
+  border-radius:100px;
+  color:var(--ink-muted);
+  background:var(--surface-2);
+}
+
+.data-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:6px 0 18px;
+  font-size:14.5px;
+}
+.data-table th{
+  text-align:left;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  font-weight:500;
+  padding:8px 12px 8px 0;
+  border-bottom:1px solid var(--border-strong);
+}
+.data-table td{
+  padding:10px 12px 10px 0;
+  border-bottom:1px solid var(--border);
+  color:var(--ink-muted);
+  vertical-align:top;
+}
+.data-table td:first-child{color:var(--ink);font-weight:500;}
+.table-wrap{overflow-x:auto;}
+
+.notice{
+  border-left:3px solid var(--accent);
+  padding:12px 16px;
+  background:var(--surface-2);
+  border-radius:0 6px 6px 0;
+  margin:0 0 16px;
+}
+.notice p{margin:0;color:var(--ink);font-size:14.5px;}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--border-strong);
+  padding-top:24px;
+  margin-top:48px;
+  font-size:13.5px;
+  color:var(--ink-faint);
+}
+footer a{color:var(--link);}
+
+@media (max-width:520px){
+  nav.toc ol{columns:1;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="doc-header">
+    <p class="eyebrow">Política de Privacidade</p>
+    <h1>Atendimento automatizado por mensagens — Conhecereis a Verdade e Os 4 Pilares da Oração Eficaz</h1>
+    <div class="doc-meta">
+      <span>Controlador: <b>69.047.840 ELIAS HENRIQUE CARDOSO</b></span>
+      <span>CNPJ: <b>69.047.840/0001-06</b></span>
+      <span>Atualizada em: <b>9 de outubro de 2026</b></span>
+    </div>
+  </header>
+
+  <div class="callout">
+    <p class="callout-title">Resumo rápido</p>
+    <dl class="fact-grid">
+      <div class="fact"><dt>O que fazemos</dt><dd>Conversamos por mensagem direta com quem comenta uma palavra-chave ou nos escreve, com ajuda de inteligência artificial e, quando necessário, pessoalmente</dd></div>
+      <div class="fact"><dt>Dados coletados</dt><dd>ID e nome de usuário, texto dos comentários e das mensagens, data/hora</dd></div>
+      <div class="fact"><dt>Finalidade</dt><dd>Responder dúvidas, apresentar o produto e enviar o link de compra</dd></div>
+      <div class="fact"><dt>Compartilhamento</dt><dd>Não vendemos nem repassamos dados a terceiros para publicidade</dd></div>
+      <div class="fact"><dt>Contato</dt><dd><a href="mailto:bateraeliashc@gmail.com">bateraeliashc@gmail.com</a></dd></div>
+    </dl>
+  </div>
+
+  <nav class="toc">
+    <p>Nesta página</p>
+    <ol>
+      <li><a href="#quem-somos">Quem somos</a></li>
+      <li><a href="#como-funciona">Como funciona o atendimento</a></li>
+      <li><a href="#dados">Quais dados coletamos</a></li>
+      <li><a href="#finalidade">Por que coletamos e base legal</a></li>
+      <li><a href="#armazenamento">Armazenamento e retenção</a></li>
+      <li><a href="#compartilhamento">Com quem compartilhamos</a></li>
+      <li><a href="#automacao">Transparência sobre o uso de inteligência artificial</a></li>
+      <li><a href="#direitos">Seus direitos (LGPD)</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#menores">Uso por menores de idade</a></li>
+      <li><a href="#alteracoes">Alterações nesta política</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ol>
+  </nav>
+
+  <section id="quem-somos">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Quem somos</h2></div>
+    <p>Esta política é publicada por <strong>69.047.840 ELIAS HENRIQUE CARDOSO</strong> (CNPJ 69.047.840/0001-06), microempreendedor individual registrado no Brasil sob a atividade de Edição de Livros, responsável pelo produto digital <strong>"Os 4 Pilares da Oração Eficaz"</strong> (ebook e audiobook) e pela conta do Instagram <strong>@conhecereis_a_verdade88</strong>.</p>
+    <p>Somos o controlador dos dados pessoais tratados por esta automação, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).</p>
+  </section>
+
+  <section id="como-funciona">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Como funciona o atendimento</h2></div>
+    <p>Mantemos uma integração com as APIs oficiais da Meta (Instagram e Facebook) que recebe os comentários públicos nas nossas publicações e as mensagens diretas enviadas ao nosso perfil. Quando alguém comenta uma palavra-chave predefinida (por exemplo, "oração") ou nos escreve, o sistema:</p>
+    <ul>
+      <li>Identifica o comentário através da API oficial do Instagram;</li>
+      <li>Registra as informações mínimas necessárias para dar sequência ao atendimento;</li>
+      <li>Envia uma mensagem direta (DM) de resposta, escrita por um assistente de inteligência artificial, com informações sobre o produto e, quando fizer sentido, um link de compra;</li>
+      <li>Continua a conversa respondendo às mensagens seguintes da pessoa, usando o histórico da conversa para manter o contexto.</li>
+    </ul>
+    <p>A pessoa pode, a qualquer momento, ignorar a mensagem recebida, pedir para falar com uma pessoa (escrevendo, por exemplo, "falar com o Elias") ou encerrar a conversa. O atendimento só responde a quem escreveu ou comentou primeiro.</p>
+  </section>
+
+  <section id="dados">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Quais dados coletamos</h2></div>
+    <p>Coletamos apenas os dados que a Meta nos disponibiliza quando alguém comenta em um dos nossos posts ou nos envia mensagem, através das APIs oficiais, e o que a própria pessoa escreve na conversa:</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Dado</th><th>Origem</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td>ID e nome de usuário do Instagram</td><td>API do Instagram (comentário público)</td><td>Enviar a mensagem direta automática</td></tr>
+          <tr><td>Texto do comentário</td><td>API do Instagram / Facebook</td><td>Confirmar a palavra-chave e o interesse no produto</td></tr>
+          <tr><td>Mensagens trocadas na conversa</td><td>A própria pessoa e o atendimento</td><td>Responder com contexto e dar continuidade ao atendimento</td></tr>
+          <tr><td>Nome público do perfil</td><td>API da Meta</td><td>Chamar a pessoa pelo nome</td></tr>
+          <tr><td>Data e hora do comentário</td><td>API do Instagram</td><td>Controle interno e suporte</td></tr>
+          <tr><td>Confirmação de compra (se houver)</td><td>Plataforma de pagamento (Kiwify)</td><td>Associar o pedido ao atendimento, sem acesso a dados de cartão</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Não pedimos senhas, dados de cartão ou localização em tempo real. Como a conversa é livre, a pessoa pode compartilhar por conta própria algo pessoal (por exemplo, um pedido de oração); tratamos esse conteúdo apenas para dar continuidade ao atendimento e orientamos o assistente a não solicitar informações sensíveis.</p>
+  </section>
+
+  <section id="finalidade">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Por que coletamos e base legal</h2></div>
+    <p>Tratamos esses dados exclusivamente para responder ao interesse manifestado pela pessoa no comentário ou na mensagem, com base nas seguintes hipóteses legais da LGPD (art. 7º):</p>
+    <div class="pill-row">
+      <span class="pill">Execução de procedimento preliminar a contrato (art. 7º, V)</span>
+      <span class="pill">Legítimo interesse (art. 7º, IX)</span>
+    </div>
+    <p>O comentário com a palavra-chave ou a mensagem enviada é interpretado como uma solicitação ativa de contato; só respondemos a quem nos procurou primeiro.</p>
+  </section>
+
+  <section id="armazenamento">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Armazenamento e retenção</h2></div>
+    <p>Os dados coletados e o histórico das conversas ficam em uma planilha privada, com acesso restrito ao controlador, hospedada em serviço de nuvem (Google). Não é de acesso público nem indexado por buscadores.</p>
+    <p>Mantemos esses registros pelo tempo necessário para o atendimento e para fins de controle fiscal e comercial, observando os prazos de guarda exigidos pela legislação brasileira aplicável a microempreendedores individuais. Após esse período, ou mediante solicitação de exclusão, os dados são removidos.</p>
+  </section>
+
+  <section id="compartilhamento">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Com quem compartilhamos</h2></div>
+    <p>Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros para fins de publicidade. Os dados podem ser processados pelos seguintes prestadores de serviço, estritamente para operar a automação:</p>
+    <ul>
+      <li><strong>Meta (Instagram e Facebook)</strong> — plataformas pelas quais o comentário e a mensagem direta trafegam;</li>
+      <li><strong>Google</strong> — armazenamento interno da planilha de atendimento e serviço de inteligência artificial (Gemini), que recebe o texto da conversa para gerar a resposta;</li>
+      <li><strong>Kiwify</strong> — processamento do pagamento, apenas se a pessoa optar por finalizar uma compra; não temos acesso aos dados do cartão.</li>
+    </ul>
+  </section>
+
+  <section id="automacao">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Transparência sobre o uso de inteligência artificial</h2></div>
+    <div class="notice">
+      <p>As respostas são <strong>geradas por um assistente virtual de inteligência artificial</strong>, que se apresenta como assistente virtual do Elias, sem intervenção humana no momento do envio. O responsável pela conta pode ler qualquer conversa e responder pessoalmente a qualquer momento.</p>
+    </div>
+  </section>
+
+  <section id="direitos">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Seus direitos (LGPD, art. 18)</h2></div>
+    <p>Como titular dos dados, você pode solicitar a qualquer momento, pelo e-mail abaixo ou escrevendo "excluir meus dados" na própria conversa, que apaga o histórico e os dados do seu atendimento:</p>
+    <ul>
+      <li>Confirmação de que tratamos seus dados e acesso a eles;</li>
+      <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>Anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+      <li>Portabilidade dos dados a outro fornecedor, mediante requisição expressa;</li>
+      <li>Eliminação dos dados tratados com base no seu consentimento;</li>
+      <li>Informação sobre entidades com as quais compartilhamos dados.</li>
+    </ul>
+  </section>
+
+  <section id="seguranca">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Segurança</h2></div>
+    <p>Adotamos medidas técnicas e administrativas razoáveis para proteger os dados coletados contra acessos não autorizados, perda ou alteração indevida, incluindo acesso restrito à planilha de controle e uso de contas protegidas por autenticação.</p>
+  </section>
+
+  <section id="menores">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Uso por menores de idade</h2></div>
+    <p>Este atendimento e o produto oferecido não são direcionados a menores de 18 anos. Não coletamos intencionalmente dados de crianças ou adolescentes. Caso identifiquemos tratamento inadvertido de dados de um menor, eles serão excluídos.</p>
+  </section>
+
+  <section id="alteracoes">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Alterações nesta política</h2></div>
+    <p>Podemos atualizar esta política periodicamente para refletir mudanças no atendimento ou na legislação aplicável. A data de vigência no topo desta página sempre indica a versão mais recente.</p>
+  </section>
+
+  <section id="contato">
+    <div class="sec-head"><span class="sec-num">12</span><h2>Contato</h2></div>
+    <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo e-mail <a href="mailto:bateraeliashc@gmail.com">bateraeliashc@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <p>69.047.840 ELIAS HENRIQUE CARDOSO · CNPJ 69.047.840/0001-06 · <a href="mailto:bateraeliashc@gmail.com">bateraeliashc@gmail.com</a> · <a href="/">conhecereisverdade.com.br</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
