@@ -324,8 +324,9 @@
   .books{ display:grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
   .book{ display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; transition: transform .2s, border-color .2s; }
   .book:hover{ transform: translateY(-4px); border-color: var(--accent); }
-  .book-cover{ display:block; aspect-ratio: 5/7; background: var(--surface-2); overflow:hidden; }
+  .book-cover{ display:block; aspect-ratio: 6/5; background: var(--surface-2); overflow:hidden; }
   .book-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .book-cover.contain img{ object-fit:contain; background:#fff; }
   .book-body{ padding: 20px 20px 22px; display:flex; flex-direction:column; gap:10px; flex:1; }
   .book h3{ font-size:1.2rem; line-height:1.25; }
   .book-desc{ margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55; flex:1; }
@@ -400,7 +401,7 @@
         </div>
       </article>
       <article class="book" data-cat="Identidade">
-        <a class="book-cover" href="https://pay.kiwify.com.br/0K4KeZY?s1=site" target="_blank" rel="noopener" aria-label="Comprar Pare de Viver como Órfão"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/708818c9-a13a-4130-b8db-43a6c747598f_aef83e9f9a3c4b3bb36b0310ea5fc021.png" alt="Capa do ebook Pare de Viver como Órfão" loading="lazy" width="400" height="560"></a>
+        <a class="book-cover contain" href="https://pay.kiwify.com.br/0K4KeZY?s1=site" target="_blank" rel="noopener" aria-label="Comprar Pare de Viver como Órfão"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/708818c9-a13a-4130-b8db-43a6c747598f_aef83e9f9a3c4b3bb36b0310ea5fc021.png" alt="Capa do ebook Pare de Viver como Órfão" loading="lazy" width="400" height="560"></a>
         <div class="book-body">
           <p class="resource-kicker">Ebook · Identidade</p>
           <h3>Pare de Viver como Órfão</h3>
@@ -562,7 +563,7 @@
 
 <footer class="wrap">
   <span>© 2026 Conhecereis a Verdade</span>
-  <a href="/privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+  <a href="privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
 </footer>
 
 <script>
