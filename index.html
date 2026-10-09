@@ -9,623 +9,521 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Conhecereis a Verdade">
-<meta property="og:description" content="E conhecereis a verdade, e a verdade vos libertará. Ebooks sobre oração, Palavra e profecia."
-<meta property="og:image" content="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/ChatGPT-Image-2_05_2026-11_55_45_bd99b597349c4568950d51a0fe2ba333.png">
+<meta property="og:description" content="E conhecereis a verdade, e a verdade vos libertará. Ebooks sobre oração, Palavra e profecia.">
 <meta property="og:url" content="https://conhecereisverdade.com.br/">
-<meta name="theme-color" content="#14100B">
+<meta property="og:image" content="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/ChatGPT-Image-2_05_2026-11_55_45_bd99b597349c4568950d51a0fe2ba333.png">
+<meta name="theme-color" content="#0A0A14">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
   :root{
-    /* dark-first: bare :root carries the dark (default) palette */
-    --bg: #14100B;
-    --surface: #1E1811;
-    --surface-2: #251D13;
-    --text: #F3EAD6;
-    --text-muted: #B7A683;
-    --text-faint: #8A7B5E;
-    --accent: #C9A227;
-    --accent-strong: #E0B15A;
-    --wine: #A8394A;
-    --border: #382C1C;
-    --shadow: rgba(0,0,0,0.45);
-    --focus: #E0B15A;
-    --ghost: rgba(201,162,39,0.10);
+    --bg:#0A0A14; --bg-2:#10102A; --surface:rgba(255,255,255,.045); --surface-2:rgba(255,255,255,.075);
+    --border:rgba(255,255,255,.10); --text:#F6F1E6; --muted:#B4B1C8; --faint:#8582A0;
+    --gold:#F4B942; --gold-2:#FFD98A; --ember:#FF7A45; --violet:#7C5CFF; --rose:#D4467A;
+    --grad-gold:linear-gradient(120deg,#FFD98A 0%,#F4B942 40%,#FF7A45 100%);
+    --radius:18px;
   }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  ::selection{background:var(--gold);color:#1a1200}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Manrope',system-ui,sans-serif;font-size:17px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.01em}
+  .wrap{max-width:1160px;margin-inline:auto;padding-inline:24px;position:relative}
+  .mono{font-family:'IBM Plex Mono',monospace}
 
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="dark"]){
-      --bg: #F7F0E1;
-      --surface: #FFFCF5;
-      --surface-2: #EFE2C4;
-      --text: #211A0F;
-      --text-muted: #5E5136;
-      --text-faint: #8A7B5E;
-      --accent: #9C6F22;
-      --accent-strong: #7A551A;
-      --wine: #8A2A38;
-      --border: #E0D2AC;
-      --shadow: rgba(90,70,30,0.12);
-      --focus: #7A551A;
-      --ghost: rgba(156,111,34,0.09);
-    }
-  }
+  /* fundo vivo fixo: luzes que se movem devagar */
+  .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:radial-gradient(1200px 700px at 80% -10%,#1d1650 0%,transparent 60%),radial-gradient(900px 600px at -10% 30%,#2a1233 0%,transparent 60%),var(--bg)}
+  .aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.38;will-change:transform}
+  .aurora i:nth-child(1){width:46vw;height:46vw;left:-8vw;top:-10vw;background:radial-gradient(circle,#F4B942,transparent 65%);animation:drift1 22s ease-in-out infinite alternate;opacity:.22}
+  .aurora i:nth-child(2){width:44vw;height:44vw;right:-10vw;top:10vh;background:radial-gradient(circle,#7C5CFF,transparent 65%);animation:drift2 26s ease-in-out infinite alternate}
+  .aurora i:nth-child(3){width:38vw;height:38vw;left:25vw;bottom:-15vw;background:radial-gradient(circle,#D4467A,transparent 65%);animation:drift3 30s ease-in-out infinite alternate;opacity:.25}
+  @keyframes drift1{to{transform:translate(12vw,10vh) scale(1.15)}}
+  @keyframes drift2{to{transform:translate(-14vw,16vh) scale(.9)}}
+  @keyframes drift3{to{transform:translate(10vw,-12vh) scale(1.2)}}
+  #embers{position:fixed;inset:0;z-index:1;pointer-events:none;width:100%;height:100%}
+  .grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  main,header.site,footer{position:relative;z-index:3}
 
-  :root[data-theme="light"]{
-    --bg: #F7F0E1;
-    --surface: #FFFCF5;
-    --surface-2: #EFE2C4;
-    --text: #211A0F;
-    --text-muted: #5E5136;
-    --text-faint: #8A7B5E;
-    --accent: #9C6F22;
-    --accent-strong: #7A551A;
-    --wine: #8A2A38;
-    --border: #E0D2AC;
-    --shadow: rgba(90,70,30,0.12);
-    --focus: #7A551A;
-    --ghost: rgba(156,111,34,0.09);
-  }
+  /* progresso */
+  .progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--grad-gold);z-index:60}
 
-  *{ box-sizing: border-box; }
-  ::selection{ background: var(--accent); color: var(--bg); }
-  html{ scroll-behavior: smooth; }
+  /* header */
+  header.site{position:sticky;top:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+  header.site.scrolled{background:rgba(10,10,20,.72);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-color:var(--border)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+  .wordmark{font-family:'Fraunces',serif;font-weight:700;font-size:1.12rem;text-decoration:none;white-space:nowrap}
+  .wordmark em{font-style:italic;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .links{display:flex;gap:26px;align-items:center}
+  .links a{font-size:.9rem;font-weight:600;color:var(--muted);text-decoration:none;transition:color .2s}
+  .links a:hover{color:var(--gold-2)}
+  @media(max-width:820px){.links a.hide-m{display:none}.links{gap:14px}}
 
-  body{
-    margin: 0;
-    position: relative;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Karla', ui-sans-serif, system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    padding-inline: 24px;
-    overflow-x: clip;
-  }
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:inherit;font-weight:700;font-size:.97rem;text-decoration:none;padding:14px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,border-color .2s,background .2s}
+  .btn i{font-style:normal;transition:transform .25s}
+  .btn:hover i{transform:translateX(5px)}
+  .btn-gold{background:var(--grad-gold);color:#1b1100;box-shadow:0 10px 30px -10px rgba(244,185,66,.65)}
+  .btn-gold::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 38px -10px rgba(244,185,66,.85)}
+  .btn-gold:hover::after{transform:translateX(120%)}
+  .btn-line{background:rgba(255,255,255,.04);border-color:var(--border);color:var(--text)}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold-2);transform:translateY(-3px)}
+  .btn.sm{padding:10px 18px;font-size:.88rem}
+  .btn.pulse{animation:pulse 2.8s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 10px 30px -10px rgba(244,185,66,.65),0 0 0 0 rgba(244,185,66,.45)}60%{box-shadow:0 10px 30px -10px rgba(244,185,66,.65),0 0 0 16px rgba(244,185,66,0)}}
 
-  /* film-grain texture, fixed, decorative */
-  body::before{
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.5;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-  }
+  /* hero */
+  .hero{min-height:calc(100svh - 70px);display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:32px 70px}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin:0 0 20px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--grad-gold)}
+  h1.verse{font-size:clamp(2.5rem,6.2vw,5rem);line-height:1.04;font-weight:600}
+  .verse .w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(2deg);animation:wordIn .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*90ms + 200ms)}
+  @keyframes wordIn{to{opacity:1;transform:none}}
+  .verse .hl{font-style:italic;font-weight:500;background:linear-gradient(100deg,#FFD98A,#F4B942,#FF7A45,#FFD98A);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:wordIn .9s cubic-bezier(.2,.8,.2,1) forwards,shimmer 6s linear infinite;animation-delay:calc(var(--i)*90ms + 200ms),0s}
+  @keyframes shimmer{to{background-position:-250% 0}}
+  .hero-sub{max-width:48ch;color:var(--muted);font-size:1.12rem;margin:26px 0 0}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .hero-trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:var(--faint);font-size:.85rem}
+  .hero-trust span{display:flex;align-items:center;gap:8px}
+  .hero-trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
 
-  a{ color: inherit; }
-  a:focus-visible, button:focus-visible{ outline: 2px solid var(--focus); outline-offset: 3px; }
+  .stack{position:relative;height:min(560px,70vw);perspective:1200px}
+  .stack .halo{position:absolute;inset:8% 4%;border-radius:50%;background:radial-gradient(circle,rgba(244,185,66,.38),rgba(124,92,255,.18) 50%,transparent 70%);filter:blur(30px);animation:breathe 6s ease-in-out infinite}
+  @keyframes breathe{50%{transform:scale(1.12);opacity:.8}}
+  .float{position:absolute;width:62%;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 70px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04);transition:transform .25s ease-out;will-change:transform}
+  .float img{display:block;width:100%;height:auto;aspect-ratio:6/5;object-fit:cover}
+  .f1{left:0;top:8%;z-index:2;animation:bob1 7s ease-in-out infinite}
+  .f2{right:0;top:0;z-index:1;width:54%;animation:bob2 8s ease-in-out infinite}
+  .f3{right:6%;bottom:0;z-index:3;width:56%;animation:bob3 9s ease-in-out infinite}
+  @keyframes bob1{50%{translate:0 -14px;rotate:-1.5deg}}
+  @keyframes bob2{50%{translate:0 12px;rotate:1.5deg}}
+  @keyframes bob3{50%{translate:0 -10px;rotate:-1deg}}
+  .f1{rotate:-6deg}.f2{rotate:5deg}.f3{rotate:-2deg}
+  .scroll-hint{position:absolute;left:24px;bottom:18px;display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+  .scroll-hint b{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
+  @keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;padding-block:24px 50px}.stack{height:min(400px,88vw);margin-top:10px}.scroll-hint{display:none}}
 
-  h1,h2,h3{ font-family: 'Fraunces', Georgia, serif; font-weight: 500; text-wrap: balance; margin: 0; }
+  /* faixa de versículos */
+  .marquee{border-block:1px solid var(--border);background:rgba(255,255,255,.025);overflow:hidden;white-space:nowrap;padding-block:18px;position:relative;z-index:3}
+  .marquee-track{display:inline-flex;gap:3rem;animation:marq 38s linear infinite;font-family:'Fraunces',serif;font-style:italic;font-size:1.35rem;color:var(--muted)}
+  .marquee-track b{font-style:normal;color:var(--gold);font-weight:400}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  @keyframes marq{to{transform:translateX(-50%)}}
 
-  .eyebrow{
-    font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
-    color: var(--accent); margin: 0 0 14px;
-  }
+  section{padding-block:96px;position:relative}
+  .head{max-width:720px;margin-bottom:48px}
+  .head h2{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.1}
+  .head p{color:var(--muted);margin:16px 0 0;font-size:1.06rem}
+  .grad{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
 
-  .wrap{ max-width: 1040px; margin-inline: auto; position: relative; z-index: 2; }
-  .prose{ max-width: 62ch; }
+  /* revelar ao rolar (só com JS ligado) */
+  .js .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms)}
+  .js .reveal.in{opacity:1;transform:none}
 
-  /* ---------- scroll progress ---------- */
-  @supports (animation-timeline: scroll()){
-    .progress{
-      position: fixed; top: 0; left: 0; height: 3px; width: 100%;
-      background: linear-gradient(90deg, var(--accent), var(--wine));
-      transform-origin: 0 50%; transform: scaleX(0);
-      animation: grow-progress linear;
-      animation-timeline: scroll(root);
-      z-index: 50;
-    }
-    @keyframes grow-progress{ to{ transform: scaleX(1); } }
-  }
+  /* quem somos */
+  .about{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+  .about p{color:var(--muted);margin:0 0 18px;font-size:1.1rem}
+  .about p strong{color:var(--gold-2);font-weight:700}
+  .tiles{display:grid;gap:14px}
+  .tile{padding:24px 26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(6px);transition:transform .3s,border-color .3s}
+  .tile:hover{transform:translateX(6px);border-color:rgba(244,185,66,.5)}
+  .tile b{display:block;font-family:'Fraunces',serif;font-size:2.6rem;line-height:1;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tile span{color:var(--muted);font-size:.95rem}
+  @media(max-width:860px){.about{grid-template-columns:1fr;gap:34px}}
 
-  /* ---------- dot nav ---------- */
-  .dotnav{
-    position: fixed; right: 22px; top: 50%; transform: translateY(-50%);
-    display: flex; flex-direction: column; gap: 14px; z-index: 40;
-  }
-  .dotnav a{
-    width: 9px; height: 9px; border-radius: 50%;
-    background: transparent; border: 1.5px solid var(--text-faint);
-    text-decoration: none; transition: background .2s, border-color .2s, transform .2s;
-  }
-  .dotnav a.active{ background: var(--accent); border-color: var(--accent); transform: scale(1.3); }
-  @media (max-width: 860px){ .dotnav{ display: none; } }
+  /* biblioteca */
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 32px}
+  .tab{font-family:inherit;font-weight:700;font-size:.9rem;padding:10px 20px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .25s}
+  .tab:hover{color:var(--text);border-color:rgba(244,185,66,.5)}
+  .tab[aria-pressed="true"]{background:var(--grad-gold);color:#1b1100;border-color:transparent;box-shadow:0 8px 24px -10px rgba(244,185,66,.7)}
+  .books{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+  .book{--mx:50%;--my:0%;position:relative;display:flex;flex-direction:column;border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid var(--border);overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .35s,opacity .35s}
+  .book::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(244,185,66,.22),transparent 55%);opacity:0;transition:opacity .3s;pointer-events:none;z-index:1}
+  .book:hover{transform:translateY(-8px);border-color:rgba(244,185,66,.55);box-shadow:0 30px 60px -25px rgba(0,0,0,.9),0 0 50px -20px rgba(244,185,66,.5)}
+  .book:hover::before{opacity:1}
+  .book.hidden{display:none}
+  .book-cover{display:block;position:relative;aspect-ratio:6/5;overflow:hidden;background:#1a1a30}
+  .book-cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .book:hover .book-cover img{transform:scale(1.07)}
+  .book-cover.contain img{object-fit:contain;background:#fff}
+  .badge{position:absolute;left:14px;top:14px;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:rgba(10,10,20,.72);backdrop-filter:blur(8px);border:1px solid var(--border);color:var(--gold-2)}
+  .book-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1;position:relative;z-index:2}
+  .kicker{margin:0;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .book h3{font-size:1.28rem;line-height:1.25}
+  .book-desc{margin:0;color:var(--muted);font-size:.95rem;line-height:1.6;flex:1}
+  .book-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:8px}
+  .price s{display:block;color:var(--faint);font-size:.82rem}
+  .price b{font-family:'IBM Plex Mono',monospace;font-size:1.45rem;font-weight:500;color:var(--gold-2)}
 
-  /* ---------- header ---------- */
-  header.site{
-    max-width: 1040px; margin-inline: auto; position: relative; z-index: 2;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    padding-block: 22px; flex-wrap: wrap;
-  }
-  .wordmark{ font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem; }
-  .wordmark em{ font-style: italic; color: var(--accent); }
-  .nav-cta{
-    font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em;
-    text-transform: uppercase; text-decoration: none; padding: 9px 16px;
-    border: 1px solid var(--border); border-radius: 999px; white-space: nowrap;
-    transition: border-color .15s, color .15s;
-  }
-  .nav-cta:hover{ border-color: var(--accent); color: var(--accent); }
+  /* versículo grande */
+  .quote{padding-block:110px;text-align:center;overflow:hidden}
+  .quote::before{content:"";position:absolute;left:50%;top:50%;width:min(900px,120vw);height:min(900px,120vw);translate:-50% -50%;background:conic-gradient(from 0deg,transparent,rgba(244,185,66,.16),transparent 25%,rgba(124,92,255,.16),transparent 55%,rgba(212,70,122,.13),transparent 80%);filter:blur(40px);border-radius:50%;-webkit-mask-image:radial-gradient(circle,#000 25%,transparent 68%);mask-image:radial-gradient(circle,#000 25%,transparent 68%);animation:spin 40s linear infinite}
+  @keyframes spin{to{rotate:360deg}}
+  .qwrap{position:relative;min-height:230px;display:grid;place-items:center}
+  .q{position:absolute;inset:0;display:grid;place-content:center;gap:18px;opacity:0;transform:translateY(20px) scale(.98);transition:opacity 1s,transform 1s;pointer-events:none}
+  .q.on{opacity:1;transform:none;pointer-events:auto}
+  .q p{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.7rem,4.2vw,3.1rem);line-height:1.2;max-width:22em;margin:0 auto}
+  .q cite{font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .dots{display:flex;gap:10px;justify-content:center;margin-top:26px;position:relative}
+  .dots button{width:9px;height:9px;border-radius:50%;border:0;background:var(--faint);opacity:.5;cursor:pointer;transition:all .3s;padding:0}
+  .dots button.on{background:var(--gold);opacity:1;width:28px;border-radius:9px}
 
-  /* ---------- hero ---------- */
-  .hero{
-    position: relative;
-    padding-block: 64px 76px;
-    text-align: left;
-    isolation: isolate;
-  }
-  .hero-glow{
-    position: absolute; inset: -40px -24px auto -24px; height: 520px;
-    z-index: -1; pointer-events: none;
-    background: radial-gradient(560px 420px at var(--mx, 30%) var(--my, 10%), var(--ghost), transparent 65%);
-    transition: background-position .1s linear;
-  }
-  .hero-eyebrow-row{ display: flex; align-items: center; gap: 12px; }
-  .hero .eyebrow{ margin: 0; }
-  .verse{
-    font-size: clamp(2.1rem, 6.4vw, 4.1rem);
-    line-height: 1.1;
-    max-width: 17ch;
-    margin: 18px 0 0;
-  }
-  .verse i{ font-style: italic; font-weight: 400; color: var(--accent-strong); }
-  .hero-sub{ max-width: 46ch; margin: 24px 0 0; color: var(--text-muted); font-size: 1.08rem; }
-  .hero-actions{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+  /* pilares */
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .pillar{--mx:50%;--my:0%;position:relative;padding:30px 24px 28px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:transform .35s,border-color .3s}
+  .pillar::before{content:"";position:absolute;inset:0;background:radial-gradient(300px circle at var(--mx) var(--my),rgba(244,185,66,.2),transparent 60%);opacity:0;transition:opacity .3s}
+  .pillar:hover{transform:translateY(-6px);border-color:rgba(244,185,66,.5)}
+  .pillar:hover::before{opacity:1}
+  .pillar .n{position:relative;font-family:'Fraunces',serif;font-weight:700;font-size:4.4rem;line-height:1;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
+  .pillar h3{position:relative;font-size:1.22rem;margin:14px 0 8px}
+  .pillar p{position:relative;margin:0;color:var(--muted);font-size:.95rem}
+  .cta-row{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  @media(max-width:980px){.pillars{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.pillars{grid-template-columns:1fr}}
 
-  .btn{
-    font-family: 'Karla', sans-serif; font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; padding: 13px 26px; border-radius: 999px;
-    display: inline-flex; align-items: center; gap: 8px; position: relative;
-    transition: transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s, border-color .15s, color .15s;
-  }
-  .btn-primary{ background: var(--accent); color: var(--bg); border: 1px solid var(--accent); }
-  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 26px -8px var(--shadow); }
-  .btn-ghost{ background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  /* seguir */
+  .follow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .fcard{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:transform .3s,border-color .3s,background .3s}
+  .fcard:hover{transform:translateY(-5px);border-color:var(--gold);background:var(--surface-2)}
+  .fcard small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+  .fcard b{font-weight:700}
+  .fcard span.ar{font-size:1.4rem;color:var(--gold);transition:transform .3s}
+  .fcard:hover span.ar{transform:translate(4px,-4px)}
 
-  /* ---------- marquee divider ---------- */
-  .marquee{
-    border-block: 1px solid var(--border);
-    overflow: hidden;
-    white-space: nowrap;
-    padding-block: 14px;
-  }
-  .marquee-track{
-    display: inline-flex; gap: 2.2rem;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--text-faint);
-    animation: scroll-left 32s linear infinite;
-  }
-  .marquee-track span{ color: var(--accent); }
-  @keyframes scroll-left{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce){ .marquee-track{ animation: none; } }
+  footer{border-top:1px solid var(--border);padding-block:40px 56px;background:rgba(0,0,0,.25)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:.88rem}
+  footer a{color:var(--muted);text-underline-offset:3px}footer a:hover{color:var(--gold-2)}
 
-  /* ---------- section shell ---------- */
-  section{ position: relative; padding-block: 60px; border-top: 1px solid var(--border); }
-  .section-head{ position: relative; margin-bottom: 40px; padding-left: 0.2rem; }
-  .section-index{
-    font-family: 'Fraunces', serif; font-weight: 600;
-    font-size: clamp(4rem, 11vw, 7.5rem);
-    line-height: 1; color: var(--ghost);
-    position: absolute; top: -0.6em; left: -0.08em;
-    z-index: -1; pointer-events: none; user-select: none;
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .verse .w{opacity:1;transform:none}.js .reveal{opacity:1;transform:none}
+    .q{position:static;display:none}.q.on{display:grid}.marquee-track{animation:none}
   }
-  .section-head h2{ font-size: clamp(1.6rem, 3.2vw, 2.3rem); }
-
-  @supports (animation-timeline: view()){
-    section{
-      animation: rise both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 30%;
-    }
-    @keyframes rise{ from{ opacity: 0; transform: translateY(18px); } to{ opacity: 1; transform: translateY(0); } }
-  }
-  @media (prefers-reduced-motion: reduce){
-    section{ animation: none !important; }
-  }
-
-  /* ---------- quem somos ---------- */
-  .lead{ font-size: 1.18rem; line-height: 1.56; }
-  .lead strong{ color: var(--accent-strong); font-weight: 600; }
-  .lead::first-letter{
-    font-family: 'Fraunces', serif; font-size: 3.4rem; font-weight: 600;
-    float: left; line-height: 0.78; padding: 0.06em 0.09em 0 0; color: var(--accent);
-  }
-
-  /* ---------- pilares ---------- */
-  .pillars{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-  .pillar{
-    position: relative; display: grid; grid-template-columns: 1fr; gap: 6px;
-    padding: 30px 0 30px 5.6rem; border-top: 1px solid var(--border);
-  }
-  .pillar:first-child{ border-top: none; }
-  .pillar-num{
-    position: absolute; left: -0.35rem; top: 14px;
-    font-family: 'Fraunces', serif; font-weight: 600;
-    font-size: 4.2rem; line-height: 1; color: var(--ghost);
-    font-variant-numeric: tabular-nums; pointer-events: none;
-  }
-  .pillar h3{ font-size: 1.25rem; margin-bottom: 6px; font-weight: 500; }
-  .pillar p{ margin: 0; color: var(--text-muted); max-width: 58ch; }
-
-  /* ---------- stats ---------- */
-  .stats{ display: flex; flex-wrap: wrap; gap: 44px 64px; }
-  .stat{ min-width: 180px; }
-  .stat-num{
-    font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums;
-    font-size: clamp(2.4rem, 5.6vw, 3.4rem); color: var(--accent-strong); line-height: 1;
-  }
-  .stat-label{ margin-top: 10px; color: var(--text-muted); font-size: 0.95rem; }
-
-  /* ---------- recursos ---------- */
-  .resource{
-    display: grid; grid-template-columns: 1fr; gap: 18px;
-    padding: 30px; border: 1px solid var(--border); border-radius: 4px;
-    background: var(--surface);
-    border-left: 3px solid var(--accent);
-    transition: border-color .2s, transform .2s;
-  }
-  .resource:hover{ transform: translateX(4px); }
-  .resource + .resource{ margin-top: 20px; }
-  .resource-top{ display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
-  .resource-kicker{
-    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
-    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint);
-  }
-  .resource h3{ font-size: 1.5rem; margin-top: 6px; }
-  .price{ text-align: right; font-family: 'IBM Plex Mono', monospace; white-space: nowrap; }
-  .price .was{ display: block; color: var(--text-faint); text-decoration: line-through; font-size: 0.85rem; }
-  .price .now{ display: block; color: var(--accent-strong); font-size: 1.6rem; font-variant-numeric: tabular-nums; }
-  .resource p{ color: var(--text-muted); max-width: 60ch; margin: 0; }
-
-  /* ---------- follow / contact ---------- */
-  .follow-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-  .follow-card{
-    display: flex; align-items: center; justify-content: space-between; gap: 14px;
-    padding: 22px; border: 1px solid var(--border); border-radius: 4px;
-    background: var(--surface); text-decoration: none; color: var(--text);
-    transition: border-color .15s, transform .18s;
-  }
-  .follow-card:hover{ border-color: var(--accent); transform: translateY(-3px); }
-  .follow-card .platform{
-    font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--text-faint); display: block; margin-bottom: 4px;
-  }
-  .follow-card .handle{ font-weight: 600; }
-  .arrow{ color: var(--accent); font-size: 1.1rem; display: inline-block; transition: transform .18s; }
-  .follow-card:hover .arrow{ transform: translate(3px,-3px); }
-
-  /* ---------- footer ---------- */
-  footer{
-    padding-block: 44px 56px; border-top: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    flex-wrap: wrap; color: var(--text-faint); font-size: 0.85rem; position: relative; z-index: 2;
-  }
-  footer a{ text-decoration: underline; text-underline-offset: 3px; color: var(--text-faint); }
-  footer a:hover{ color: var(--accent); }
-
-  @media (max-width: 560px){
-    .pillar{ padding-left: 3.6rem; }
-    .pillar-num{ font-size: 2.6rem; top: 16px; }
-    .resource{ padding: 24px 18px; }
-    header.site{ padding-block: 16px; }
-    .section-index{ font-size: 4rem; }
-  }
-
-  /* ---------- biblioteca ---------- */
-  .shelf + .shelf{ margin-top: 54px; }
-  .shelf-title{ font-size: 1.35rem; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom: 22px; }
-  .shelf-title span{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint); font-weight:400; }
-  .books{ display:grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
-  .book{ display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--border); border-radius:6px; overflow:hidden; transition: transform .2s, border-color .2s; }
-  .book:hover{ transform: translateY(-4px); border-color: var(--accent); }
-  .book-cover{ display:block; aspect-ratio: 6/5; background: var(--surface-2); overflow:hidden; }
-  .book-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .book-cover.contain img{ object-fit:contain; background:#fff; }
-  .book-body{ padding: 20px 20px 22px; display:flex; flex-direction:column; gap:10px; flex:1; }
-  .book h3{ font-size:1.2rem; line-height:1.25; }
-  .book-desc{ margin:0; color:var(--text-muted); font-size:.95rem; line-height:1.55; flex:1; }
-  .book-foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:6px; }
-  .book-foot .price{ text-align:left; }
-  .book-foot .price .now{ font-size:1.35rem; }
-  .book .btn{ padding: 10px 18px; font-size:.9rem; }
-  .pillars-feature{ margin-top: 8px; }
+  @media(max-width:560px){section{padding-block:68px}.btn{padding:13px 22px}}
 </style>
 </head>
 <body>
-<div class="progress"></div>
-<div class="dotnav" id="dotnav">
-  <a href="#quem-somos" aria-label="Quem somos"></a>
-  <a href="#ebooks" aria-label="Ebooks"></a>
-  <a href="#pilares" aria-label="Os 4 pilares"></a>
-  <a href="#comunidade" aria-label="Comunidade"></a>
-  <a href="#seguir" aria-label="Vamos juntos"></a>
-</div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="embers" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
 
-<header class="site">
-  <div class="wordmark">Conhecereis <em>a Verdade</em></div>
-  <a class="nav-cta" href="https://www.instagram.com/conhecereis_a_verdade88/" target="_blank" rel="noopener">Seguir no Instagram</a>
+<header class="site" id="top">
+  <div class="wrap nav">
+    <a class="wordmark" href="#top">Conhecereis <em>a Verdade</em></a>
+    <nav class="links" aria-label="Principal">
+      <a class="hide-m" href="#ebooks">Ebooks</a>
+      <a class="hide-m" href="#pilares">Os 4 Pilares</a>
+      <a class="hide-m" href="#sobre">Quem somos</a>
+      <a class="btn btn-line sm" href="https://www.instagram.com/conhecereis_a_verdade88/" target="_blank" rel="noopener">Instagram <i>↗</i></a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <section class="hero" style="border-top:none; padding-block-start: 8px;" id="hero">
-    <div class="hero-glow" id="heroGlow"></div>
-    <p class="eyebrow">João 8:32</p>
-    <h1 class="verse">E <i>conhecereis</i> a verdade, e a verdade vos <i>libertará</i>.</h1>
-    <p class="hero-sub">Ebooks para quem quer levar a fé a sério — oração com mais profundidade, discernimento e a Palavra estudada com cuidado, um passo de cada vez.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="https://www.instagram.com/conhecereis_a_verdade88/" target="_blank" rel="noopener">Seguir no Instagram →</a>
-      <a class="btn btn-ghost" href="#ebooks">Ver os ebooks</a>
+<main>
+  <div class="wrap hero" id="hero">
+    <div>
+      <p class="eyebrow">João 8:32</p>
+      <h1 class="verse" aria-label="E conhecereis a verdade, e a verdade vos libertará.">
+        <span class="w" style="--i:0">E</span> <span class="w hl" style="--i:1">conhecereis</span> <span class="w" style="--i:2">a</span> <span class="w" style="--i:3">verdade,</span> <span class="w" style="--i:4">e</span> <span class="w" style="--i:5">a</span> <span class="w" style="--i:6">verdade</span> <span class="w" style="--i:7">vos</span> <span class="w hl" style="--i:8">libertará.</span>
+      </h1>
+      <p class="hero-sub">Ebooks para quem quer levar a fé a sério: oração com mais profundidade, discernimento e a Palavra estudada com cuidado — um passo de cada vez.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold pulse" href="#ebooks">Ver os ebooks <i>→</i></a>
+        <a class="btn btn-line" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener">Começar pelos 4 Pilares</a>
+      </div>
+      <div class="hero-trust"><span>Acesso imediato por e-mail</span><span>Pagamento seguro (Kiwify)</span><span>Garantia de 7 dias</span></div>
     </div>
-  </section>
+    <div class="stack" id="stack" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="float f2" data-depth="14"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_542f95038a0346a8ba4d66dadfd297cb.png" alt="" width="600" height="500"></div>
+      <div class="float f1" data-depth="26"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/ChatGPT-Image-2_05_2026-11_55_45_bd99b597349c4568950d51a0fe2ba333.png" alt="" width="600" height="500"></div>
+      <div class="float f3" data-depth="38"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa-para-pre_f9385117fef646bda21b0b22c8456cb2.png" alt="" width="600" height="500"></div>
+    </div>
+    <div class="scroll-hint"><b></b>Role</div>
+  </div>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Oração</span>·Palavra·<span>Constância</span>·Fé·<span>Comunidade</span>·Propósito·
-      <span>Oração</span>·Palavra·<span>Constância</span>·Fé·<span>Comunidade</span>·Propósito·
+      <span>Orai sem cessar</span><b>✦</b><span>Lâmpada para os meus pés é a tua palavra</span><b>✦</b><span>Buscai e encontrareis</span><b>✦</b><span>A verdade vos libertará</span><b>✦</b><span>Sede fortes e corajosos</span><b>✦</b>
+      <span>Orai sem cessar</span><b>✦</b><span>Lâmpada para os meus pés é a tua palavra</span><b>✦</b><span>Buscai e encontrareis</span><b>✦</b><span>A verdade vos libertará</span><b>✦</b><span>Sede fortes e corajosos</span><b>✦</b>
     </div>
   </div>
 
-  <section id="quem-somos">
-    <div class="section-head">
-      <span class="section-index">01</span>
-      <p class="eyebrow">Quem somos</p>
-      <h2>Fé prática, sem enrolação</h2>
+  <section id="sobre">
+    <div class="wrap about">
+      <div class="reveal">
+        <p class="eyebrow">Quem somos</p>
+        <div class="head" style="margin-bottom:22px"><h2>Fé prática, <span class="grad">sem enrolação</span></h2></div>
+        <p>Conhecereis a Verdade é o trabalho de <strong>Elias Henrique Cardoso</strong>, criador evangélico, e nasceu para colocar a Palavra em linguagem simples e aplicável ao dia a dia. Nada de teoria distante — cada conteúdo é pensado para virar <strong>hábito</strong>: um jeito mais firme de orar, mais constante de estudar, mais consciente de viver o que a Bíblia ensina.</p>
+        <p>Tudo começou nos comentários e nas mensagens diretas do Instagram e do Facebook, respondendo a quem perguntava “como eu oro melhor?” — e hoje é o mesmo compromisso, em escala maior.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile reveal" style="--d:80ms"><b data-count="90" data-suffix=" mil+">90 mil+</b><span>seguidores no Instagram</span></div>
+        <div class="tile reveal" style="--d:160ms"><b data-count="40" data-suffix=" mil+">40 mil+</b><span>seguidores no Facebook</span></div>
+        <div class="tile reveal" style="--d:240ms"><b data-count="9" data-suffix="">9</b><span>ebooks de autoria própria</span></div>
+      </div>
     </div>
-    <p class="lead prose">Conhecereis a Verdade é o trabalho de <strong>Elias Henrique Cardoso</strong>, criador evangélico, e nasceu para colocar a Palavra em linguagem simples e aplicável ao dia a dia. Nada de teoria distante — cada conteúdo é pensado para sair da tela e virar <strong>hábito</strong>: um jeito mais firme de orar, mais constante de estudar, mais consciente de viver o que a Bíblia ensina.</p>
-    <p class="lead prose" style="margin-top:16px;">O trabalho começou nos comentários e nas mensagens diretas do Instagram e do Facebook, respondendo a quem perguntava "como eu oro melhor?" — e hoje é o mesmo compromisso, só que em escala maior.</p>
   </section>
 
   <section id="ebooks">
-    <div class="section-head">
-      <span class="section-index">02</span>
-      <p class="eyebrow">Biblioteca</p>
-      <h2>Ebooks para estudar a Palavra com profundidade</h2>
-    </div>
-    <p class="prose" style="margin:0 0 40px;color:var(--text-muted)">Todos os ebooks são de autoria de Elias Henrique Cardoso, em linguagem simples e direta. A compra é feita no ambiente seguro da Kiwify e o acesso chega por e-mail.</p>
-    <div class="shelf"><h3 class="shelf-title">Oração e identidade<span>Fundamentos da vida de fé</span></h3>
-    <div class="books">
-      <article class="book" data-cat="Oração">
-        <a class="book-cover" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener" aria-label="Comprar Os 4 Pilares da Oração Eficaz"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/ChatGPT-Image-2_05_2026-11_55_45_bd99b597349c4568950d51a0fe2ba333.png" alt="Capa do ebook Os 4 Pilares da Oração Eficaz" loading="lazy" width="400" height="560"></a>
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Biblioteca</p>
+        <h2>Ebooks para estudar a Palavra <span class="grad">com profundidade</span></h2>
+        <p>Todos são de autoria de Elias Henrique Cardoso. A compra é feita no ambiente seguro da Kiwify e o acesso chega por e-mail.</p>
+      </div>
+      <div class="tabs reveal" role="group" aria-label="Filtrar por tema">
+        <button class="tab" aria-pressed="true" data-f="all">Todos</button>
+        <button class="tab" aria-pressed="false" data-f="Oração">Oração</button>
+        <button class="tab" aria-pressed="false" data-f="Identidade">Identidade</button>
+        <button class="tab" aria-pressed="false" data-f="Discernimento">Discernimento</button>
+        <button class="tab" aria-pressed="false" data-f="Fim dos tempos">Fim dos tempos</button>
+      </div>
+      <div class="books" id="books">
+      <article class="book reveal" data-cat="Oração">
+        <a class="book-cover" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener" aria-label="Comprar Os 4 Pilares da Oração Eficaz"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/ChatGPT-Image-2_05_2026-11_55_45_bd99b597349c4568950d51a0fe2ba333.png" alt="Capa do ebook Os 4 Pilares da Oração Eficaz" loading="lazy" width="600" height="500"><span class="badge">Oração</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook + audiobook · Oração</p>
+          <p class="kicker">Ebook + audiobook</p>
           <h3>Os 4 Pilares da Oração Eficaz</h3>
           <p class="book-desc">Os quatro fundamentos bíblicos que transformam a oração — ancoragem, alinhamento, rendição e constância — com audiobook e o bônus “21 Dias de Orações Guiadas”. Garantia de 7 dias.</p>
-          <div class="book-foot"><div class="price"><span class="was">R$ 47,00</span><span class="now">R$ 27,00</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><s>R$ 47,00</s><b>R$ 27,00</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-      <article class="book" data-cat="Identidade">
-        <a class="book-cover contain" href="https://pay.kiwify.com.br/0K4KeZY?s1=site" target="_blank" rel="noopener" aria-label="Comprar Pare de Viver como Órfão"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/708818c9-a13a-4130-b8db-43a6c747598f_aef83e9f9a3c4b3bb36b0310ea5fc021.png" alt="Capa do ebook Pare de Viver como Órfão" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Identidade">
+        <a class="book-cover contain" href="https://pay.kiwify.com.br/0K4KeZY?s1=site" target="_blank" rel="noopener" aria-label="Comprar Pare de Viver como Órfão"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/708818c9-a13a-4130-b8db-43a6c747598f_aef83e9f9a3c4b3bb36b0310ea5fc021.png" alt="Capa do ebook Pare de Viver como Órfão" loading="lazy" width="600" height="500"><span class="badge">Identidade</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Identidade</p>
+          <p class="kicker">Ebook</p>
           <h3>Pare de Viver como Órfão</h3>
           <p class="book-desc">O significado bíblico de ser filho de Deus: deixe a mentalidade de servo, cure feridas e assuma com confiança o lugar que Deus lhe deu em Cristo.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 29,90</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/0K4KeZY?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 29,90</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/0K4KeZY?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-    </div></div>
-    <div class="shelf"><h3 class="shelf-title">Discernimento<span>Para não ser enganado</span></h3>
-    <div class="books">
-      <article class="book" data-cat="Discernimento">
-        <a class="book-cover" href="https://pay.kiwify.com.br/xlD0712?s1=site" target="_blank" rel="noopener" aria-label="Comprar Desmascarando Falsos Profetas"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_542f95038a0346a8ba4d66dadfd297cb.png" alt="Capa do ebook Desmascarando Falsos Profetas" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Discernimento">
+        <a class="book-cover" href="https://pay.kiwify.com.br/xlD0712?s1=site" target="_blank" rel="noopener" aria-label="Comprar Desmascarando Falsos Profetas"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_542f95038a0346a8ba4d66dadfd297cb.png" alt="Capa do ebook Desmascarando Falsos Profetas" loading="lazy" width="600" height="500"><span class="badge">Discernimento</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Discernimento</p>
+          <p class="kicker">Ebook</p>
           <h3>Desmascarando Falsos Profetas</h3>
           <p class="book-desc">Um alerta urgente contra o disfarce das falsas doutrinas que se infiltram nos púlpitos. Abra os olhos e firme sua fé na verdade que liberta.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 35,00</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/xlD0712?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 35,00</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/xlD0712?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-      <article class="book" data-cat="Discernimento">
-        <a class="book-cover" href="https://pay.kiwify.com.br/izES1gY?s1=site" target="_blank" rel="noopener" aria-label="Comprar Desmascarando Falsos Profetas — Guia Prático"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_c10f2ea2fed44559afeccb11aef9e587.png" alt="Capa do ebook Desmascarando Falsos Profetas — Guia Prático" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Discernimento">
+        <a class="book-cover" href="https://pay.kiwify.com.br/izES1gY?s1=site" target="_blank" rel="noopener" aria-label="Comprar Desmascarando Falsos Profetas — Guia Prático"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_c10f2ea2fed44559afeccb11aef9e587.png" alt="Capa do ebook Desmascarando Falsos Profetas — Guia Prático" loading="lazy" width="600" height="500"><span class="badge">Discernimento</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Guia prático · Discernimento</p>
+          <p class="kicker">Guia prático</p>
           <h3>Desmascarando Falsos Profetas — Guia Prático</h3>
           <p class="book-desc">A versão em guia prático do alerta contra as falsas doutrinas: para estudar, aplicar e firmar sua fé na Palavra de Deus.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 37,00</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/izES1gY?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 37,00</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/izES1gY?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-    </div></div>
-    <div class="shelf"><h3 class="shelf-title">Fim dos tempos<span>A esperança e a profecia, com clareza</span></h3>
-    <div class="books">
-      <article class="book" data-cat="Fim dos tempos">
-        <a class="book-cover" href="https://pay.kiwify.com.br/8J3HALj?s1=site" target="_blank" rel="noopener" aria-label="Comprar O Fim está Próximo!"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_5262ba3d1bd849288c611136263beb0a.png" alt="Capa do ebook O Fim está Próximo!" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Fim dos tempos">
+        <a class="book-cover" href="https://pay.kiwify.com.br/8J3HALj?s1=site" target="_blank" rel="noopener" aria-label="Comprar O Fim está Próximo!"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/Design-sem-nome-1_5262ba3d1bd849288c611136263beb0a.png" alt="Capa do ebook O Fim está Próximo!" loading="lazy" width="600" height="500"><span class="badge">Fim dos tempos</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Fim dos tempos</p>
+          <p class="kicker">Ebook</p>
           <h3>O Fim está Próximo!</h3>
           <p class="book-desc">As principais correntes sobre o fim dos tempos — pré, meso e pós-tribulacionismo — explicadas de forma didática e direta, capítulo por capítulo.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 19,90</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/8J3HALj?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 19,90</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/8J3HALj?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-      <article class="book" data-cat="Fim dos tempos">
-        <a class="book-cover" href="https://pay.kiwify.com.br/NBEEPZe?s1=site" target="_blank" rel="noopener" aria-label="Comprar Triunfando na Tribulação"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa-pos_19a27c67963d443097696cfc45223601.png" alt="Capa do ebook Triunfando na Tribulação" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Fim dos tempos">
+        <a class="book-cover" href="https://pay.kiwify.com.br/NBEEPZe?s1=site" target="_blank" rel="noopener" aria-label="Comprar Triunfando na Tribulação"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa-pos_19a27c67963d443097696cfc45223601.png" alt="Capa do ebook Triunfando na Tribulação" loading="lazy" width="600" height="500"><span class="badge">Fim dos tempos</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Fim dos tempos</p>
+          <p class="kicker">Ebook</p>
           <h3>Triunfando na Tribulação</h3>
           <p class="book-desc">A visão pós-tribulacionista: as bases bíblicas e o chamado a perseverar na fé mesmo nos tempos mais difíceis.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 29,90</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/NBEEPZe?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 29,90</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/NBEEPZe?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-      <article class="book" data-cat="Fim dos tempos">
-        <a class="book-cover" href="https://pay.kiwify.com.br/YDI47sR?s1=site" target="_blank" rel="noopener" aria-label="Comprar Resgatados no Meio da Tribulação"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa_7b4e29b280924f3eb4cc9658d155e8d7.png" alt="Capa do ebook Resgatados no Meio da Tribulação" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Fim dos tempos">
+        <a class="book-cover" href="https://pay.kiwify.com.br/YDI47sR?s1=site" target="_blank" rel="noopener" aria-label="Comprar Resgatados no Meio da Tribulação"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa_7b4e29b280924f3eb4cc9658d155e8d7.png" alt="Capa do ebook Resgatados no Meio da Tribulação" loading="lazy" width="600" height="500"><span class="badge">Fim dos tempos</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Fim dos tempos</p>
+          <p class="kicker">Ebook</p>
           <h3>Resgatados no Meio da Tribulação</h3>
           <p class="book-desc">O meso-tribulacionismo: as Escrituras que apontam para o resgate dos fiéis no meio das tribulações finais.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 29,90</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/YDI47sR?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 29,90</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/YDI47sR?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-      <article class="book" data-cat="Fim dos tempos">
-        <a class="book-cover" href="https://pay.kiwify.com.br/ymNlnnH?s1=site" target="_blank" rel="noopener" aria-label="Comprar A Grande Fuga!"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa-para-pre_f9385117fef646bda21b0b22c8456cb2.png" alt="Capa do ebook A Grande Fuga!" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Fim dos tempos">
+        <a class="book-cover" href="https://pay.kiwify.com.br/ymNlnnH?s1=site" target="_blank" rel="noopener" aria-label="Comprar A Grande Fuga!"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/capa-para-pre_f9385117fef646bda21b0b22c8456cb2.png" alt="Capa do ebook A Grande Fuga!" loading="lazy" width="600" height="500"><span class="badge">Fim dos tempos</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Fim dos tempos</p>
+          <p class="kicker">Ebook</p>
           <h3>A Grande Fuga!</h3>
           <p class="book-desc">A doutrina do arrebatamento antes da Grande Tribulação (pré-tribulacionismo), apresentada de forma clara e acessível.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 29,90</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/ymNlnnH?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 29,90</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/ymNlnnH?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-      <article class="book" data-cat="Fim dos tempos">
-        <a class="book-cover" href="https://pay.kiwify.com.br/sfPtRfN?s1=site" target="_blank" rel="noopener" aria-label="Comprar Você está sendo Manipulado!"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/IMG-20240806-WA0001_538ec29a306b4084ba6a8cf02fce6c91.jpg" alt="Capa do ebook Você está sendo Manipulado!" loading="lazy" width="400" height="560"></a>
+      <article class="book reveal" data-cat="Fim dos tempos">
+        <a class="book-cover" href="https://pay.kiwify.com.br/sfPtRfN?s1=site" target="_blank" rel="noopener" aria-label="Comprar Você está sendo Manipulado!"><img src="https://aws-assets.kiwify.com.br/NK4K0motR1kjhBN/IMG-20240806-WA0001_538ec29a306b4084ba6a8cf02fce6c91.jpg" alt="Capa do ebook Você está sendo Manipulado!" loading="lazy" width="600" height="500"><span class="badge">Fim dos tempos</span></a>
         <div class="book-body">
-          <p class="resource-kicker">Ebook · Fim dos tempos</p>
+          <p class="kicker">Ebook</p>
           <h3>Você está sendo Manipulado!</h3>
           <p class="book-desc">Uma introdução envolvente à escatologia: os eventos finais segundo a Bíblia e como se relacionam com o mundo de hoje.</p>
-          <div class="book-foot"><div class="price"><span class="now">R$ 19,90</span></div>
-          <a class="btn btn-primary" href="https://pay.kiwify.com.br/sfPtRfN?s1=site" target="_blank" rel="noopener">Quero este →</a></div>
+          <div class="book-foot"><div class="price"><b>R$ 19,90</b></div>
+          <a class="btn btn-gold sm" href="https://pay.kiwify.com.br/sfPtRfN?s1=site" target="_blank" rel="noopener">Quero este <i>→</i></a></div>
         </div>
       </article>
-    </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote" aria-label="Versículos">
+    <div class="wrap">
+      <div class="qwrap" id="qwrap">
+        <figure class="q on" style="margin:0"><p>“Pedi, e dar-se-vos-á; buscai, e encontrareis; batei, e abrir-se-vos-á.”</p><cite>Mateus 7:7</cite></figure>
+        <figure class="q" style="margin:0"><p>“Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho.”</p><cite>Salmos 119:105</cite></figure>
+        <figure class="q" style="margin:0"><p>“Orai sem cessar.”</p><cite>1 Tessalonicenses 5:17</cite></figure>
+        <figure class="q" style="margin:0"><p>“E conhecereis a verdade, e a verdade vos libertará.”</p><cite>João 8:32</cite></figure>
+      </div>
+      <div class="dots" id="qdots"></div>
+    </div>
   </section>
 
   <section id="pilares">
-    <div class="section-head">
-      <span class="section-index">03</span>
-      <p class="eyebrow">Destaque · Os 4 Pilares</p>
-      <h2>Uma oração mais eficaz começa com fundamentos claros</h2>
-    </div>
-    <ol class="pillars">
-      <li class="pillar">
-        <span class="pillar-num">01</span>
-        <h3>Ancoragem</h3>
-        <p>Orar a partir de uma base firme — saber em quem e em que promessas você está apoiado antes de pedir qualquer coisa.</p>
-      </li>
-      <li class="pillar">
-        <span class="pillar-num">02</span>
-        <h3>Alinhamento</h3>
-        <p>Ajustar o pedido à vontade de Deus, não o contrário — orar com discernimento em vez de só repetir desejos.</p>
-      </li>
-      <li class="pillar">
-        <span class="pillar-num">03</span>
-        <h3>Ousadia com Rendição</h3>
-        <p>Pedir com coragem e, ao mesmo tempo, entregar o resultado — fé que não depende de controlar a resposta.</p>
-      </li>
-      <li class="pillar">
-        <span class="pillar-num">04</span>
-        <h3>Constância</h3>
-        <p>Fazer da oração uma prática diária, não um recurso de emergência — é a constância que sustenta os outros três pilares.</p>
-      </li>
-    </ol>
-    <div style="margin-top:28px"><a class="btn btn-primary" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener">Quero o ebook dos 4 Pilares →</a></div>
-  </section>
-
-  <section id="comunidade">
-    <div class="section-head">
-      <span class="section-index">04</span>
-      <p class="eyebrow">Comunidade</p>
-      <h2>Uma caminhada compartilhada</h2>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num" data-count="90" data-suffix=" mil+">90 mil+</div>
-        <div class="stat-label">seguidores no Instagram</div>
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Destaque · Os 4 Pilares</p>
+        <h2>Uma oração mais eficaz começa com <span class="grad">fundamentos claros</span></h2>
       </div>
-      <div class="stat">
-        <div class="stat-num" data-count="40" data-suffix=" mil+">40 mil+</div>
-        <div class="stat-label">seguidores no Facebook</div>
+      <div class="pillars">
+        <div class="pillar reveal"><span class="n">01</span><h3>Ancoragem</h3><p>Orar a partir de uma base firme — saber em quem e em que promessas você está apoiado antes de pedir qualquer coisa.</p></div>
+        <div class="pillar reveal" style="--d:90ms"><span class="n">02</span><h3>Alinhamento</h3><p>Ajustar o pedido à vontade de Deus, não o contrário — orar com discernimento em vez de só repetir desejos.</p></div>
+        <div class="pillar reveal" style="--d:180ms"><span class="n">03</span><h3>Ousadia com Rendição</h3><p>Pedir com coragem e, ao mesmo tempo, entregar o resultado — fé que não depende de controlar a resposta.</p></div>
+        <div class="pillar reveal" style="--d:270ms"><span class="n">04</span><h3>Constância</h3><p>Fazer da oração uma prática diária, não um recurso de emergência — a constância sustenta os outros três pilares.</p></div>
+      </div>
+      <div class="cta-row reveal">
+        <a class="btn btn-gold" href="https://pay.kiwify.com.br/p3a1nBS?s1=site" target="_blank" rel="noopener">Quero o ebook dos 4 Pilares <i>→</i></a>
+        <span style="color:var(--muted);font-size:.95rem">Ebook + audiobook + bônus “21 Dias de Orações Guiadas” · Garantia de 7 dias</span>
       </div>
     </div>
   </section>
 
   <section id="seguir">
-    <div class="section-head">
-      <span class="section-index">05</span>
-      <p class="eyebrow">Vamos juntos</p>
-      <h2>Continue essa caminhada com a gente</h2>
-    </div>
-    <div class="follow-grid">
-      <a class="follow-card" href="https://www.instagram.com/conhecereis_a_verdade88/" target="_blank" rel="noopener">
-        <div><span class="platform">Instagram</span><span class="handle">@conhecereis_a_verdade88</span></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a class="follow-card" href="https://www.facebook.com/Conhecereis_a_Verdade" target="_blank" rel="noopener">
-        <div><span class="platform">Facebook</span><span class="handle">Conhecereis a Verdade</span></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a class="follow-card" href="mailto:bateraeliashc@gmail.com">
-        <div><span class="platform">Contato</span><span class="handle">bateraeliashc@gmail.com</span></div>
-        <span class="arrow">↗</span>
-      </a>
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Vamos juntos</p>
+        <h2>Continue essa caminhada <span class="grad">com a gente</span></h2>
+      </div>
+      <div class="follow">
+        <a class="fcard reveal" href="https://www.instagram.com/conhecereis_a_verdade88/" target="_blank" rel="noopener"><div><small>Instagram</small><b>@conhecereis_a_verdade88</b></div><span class="ar">↗</span></a>
+        <a class="fcard reveal" style="--d:90ms" href="https://www.facebook.com/Conhecereis_a_Verdade" target="_blank" rel="noopener"><div><small>Facebook</small><b>Conhecereis a Verdade</b></div><span class="ar">↗</span></a>
+        <a class="fcard reveal" style="--d:180ms" href="mailto:bateraeliashc@gmail.com"><div><small>Contato</small><b>bateraeliashc@gmail.com</b></div><span class="ar">↗</span></a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="wrap">
-  <span>© 2026 Conhecereis a Verdade</span>
-  <a href="privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Conhecereis a Verdade</span>
+    <a href="privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+  </div>
 </footer>
 
 <script>
 (function(){
   "use strict";
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && matchMedia('(pointer: fine)').matches;
 
-  // cursor-follow glow in hero (pointer devices only)
-  var hero = document.getElementById('hero');
-  var glow = document.getElementById('heroGlow');
-  if (hero && glow && !reduce && window.matchMedia('(pointer: fine)').matches){
-    hero.addEventListener('pointermove', function(e){
-      var r = hero.getBoundingClientRect();
-      var x = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%';
-      var y = ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
-      glow.style.setProperty('--mx', x);
-      glow.style.setProperty('--my', y);
+  /* progresso + header */
+  var prog=document.getElementById('progress'), head=document.querySelector('header.site');
+  function onScroll(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    prog.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';
+    head.classList.toggle('scrolled', h.scrollTop>24);
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* revelar ao rolar */
+  var rev=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    rev.forEach(function(el){io.observe(el)});
+    setTimeout(function(){rev.forEach(function(el){el.classList.add('in')})},6000); /* rede de segurança */
+  } else rev.forEach(function(el){el.classList.add('in')});
+
+  /* contadores */
+  [].slice.call(document.querySelectorAll('[data-count]')).forEach(function(el){
+    if(reduce||!('IntersectionObserver' in window))return;
+    var t=+el.dataset.count, s=el.dataset.suffix||'', done=false;
+    new IntersectionObserver(function(es,ob){es.forEach(function(e){
+      if(!e.isIntersecting||done)return; done=true; ob.disconnect();
+      var st=performance.now(),d=1200;
+      (function f(n){var p=Math.min(1,(n-st)/d),k=1-Math.pow(1-p,3);el.textContent=Math.round(k*t)+s;if(p<1)requestAnimationFrame(f);else el.textContent=t+s})(st);
+    })},{threshold:.6}).observe(el);
+  });
+
+  /* filtro da biblioteca */
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), books=[].slice.call(document.querySelectorAll('.book'));
+  tabs.forEach(function(tb){tb.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===tb)});
+    var f=tb.dataset.f;
+    books.forEach(function(b){
+      var show=f==='all'||b.dataset.cat===f;
+      b.classList.toggle('hidden',!show);
+      if(show){b.classList.remove('in');void b.offsetWidth;b.classList.add('in')}
+    });
+  })});
+
+  /* brilho que segue o mouse nos cards */
+  if(fine){
+    [].slice.call(document.querySelectorAll('.book,.pillar')).forEach(function(c){
+      c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});
     });
   }
 
-  // dot nav: click to scroll + active-state tracking (decorative UI, content always visible regardless)
-  var dots = document.querySelectorAll('#dotnav a');
-  var sections = Array.prototype.map.call(dots, function(d){
-    return document.querySelector(d.getAttribute('href'));
-  });
-  if ('IntersectionObserver' in window && dots.length){
-    var obs = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        var idx = sections.indexOf(entry.target);
-        if (idx > -1 && entry.isIntersecting){
-          dots.forEach(function(d){ d.classList.remove('active'); });
-          dots[idx].classList.add('active');
-        }
-      });
-    }, { rootMargin: '-45% 0px -45% 0px' });
-    sections.forEach(function(s){ if (s) obs.observe(s); });
+  /* parallax das capas no hero */
+  var stack=document.getElementById('stack');
+  if(stack && fine && !reduce){
+    var fl=[].slice.call(stack.querySelectorAll('.float'));
+    var hero=document.getElementById('hero');
+    hero.addEventListener('pointermove',function(e){
+      var r=hero.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      fl.forEach(function(el){var d=+el.dataset.depth;el.style.transform='translate3d('+(x*d*-1)+'px,'+(y*d*-1)+'px,0)'});
+    });
+    hero.addEventListener('pointerleave',function(){fl.forEach(function(el){el.style.transform=''})});
   }
 
-  // gentle count-up for community stats, ending exactly at the real printed value
-  var nums = document.querySelectorAll('.stat-num');
-  if ('IntersectionObserver' in window && nums.length && !reduce){
-    var counted = new WeakSet();
-    var counterObs = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (!entry.isIntersecting || counted.has(entry.target)) return;
-        counted.add(entry.target);
-        var el = entry.target;
-        var target = parseInt(el.getAttribute('data-count'), 10);
-        var suffix = el.getAttribute('data-suffix') || '';
-        var start = performance.now();
-        var dur = 900;
-        function frame(now){
-          var p = Math.min(1, (now - start) / dur);
-          var eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(eased * target) + suffix;
-          if (p < 1) requestAnimationFrame(frame);
-          else el.textContent = target + suffix;
-        }
-        requestAnimationFrame(frame);
+  /* versículos em rotação */
+  var qs=[].slice.call(document.querySelectorAll('.q')), dots=document.getElementById('qdots'), qi=0, timer;
+  qs.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Versículo '+(i+1));b.addEventListener('click',function(){go(i,true)});dots.appendChild(b)});
+  var db=[].slice.call(dots.children);
+  function go(i,manual){qi=i;qs.forEach(function(q,k){q.classList.toggle('on',k===i)});db.forEach(function(d,k){d.classList.toggle('on',k===i)});if(manual){clearInterval(timer);if(!reduce)timer=setInterval(function(){go((qi+1)%qs.length)},6500)}}
+  go(0); if(!reduce)timer=setInterval(function(){go((qi+1)%qs.length)},6500);
+
+  /* brasas douradas flutuando */
+  var cv=document.getElementById('embers');
+  if(cv && !reduce){
+    var cx=cv.getContext('2d'), W,H,dpr=Math.min(devicePixelRatio||1,2), P=[], N=window.innerWidth<700?26:56, run=true;
+    function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+    function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*1.9+.5,v:Math.random()*.35+.12,s:Math.random()*Math.PI*2,a:Math.random()*.5+.25,c:Math.random()<.75?'244,185,66':'255,122,69'}}
+    size(); for(var i=0;i<N;i++)P.push(mk(true));
+    addEventListener('resize',size);
+    document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+    function tick(){
+      if(!run)return; cx.clearRect(0,0,W,H);
+      P.forEach(function(p,i){
+        p.y-=p.v; p.s+=.012; p.x+=Math.sin(p.s)*.35;
+        if(p.y<-10)P[i]=mk(false);
+        var g=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*5);
+        g.addColorStop(0,'rgba('+p.c+','+p.a+')');g.addColorStop(1,'rgba('+p.c+',0)');
+        cx.fillStyle=g;cx.beginPath();cx.arc(p.x,p.y,p.r*5,0,6.283);cx.fill();
       });
-    }, { threshold: 0.6 });
-    nums.forEach(function(n){ counterObs.observe(n); });
+      requestAnimationFrame(tick);
+    }
+    tick();
   }
 })();
 </script>
